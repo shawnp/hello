@@ -1,13 +1,6 @@
-{% load staticfiles %}
-<!doctypehtml>
-<html>
-<head>
-	<title>MyHelloWebAppProject</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-</head>
-<body>
-	<h1>HelloWorld!</h1>
-	<p>I am a basic website.</p>
-</body>
-
-</html
+{% extends 'layouts/base.html'%}
+{% block title %} HomePage - {{ block.super}} {% endblock %}
+{% block content %}
+	<h1> Hello index page! </h1>
+	<p> I am a basic websie.</p>
+{% endblock %}
