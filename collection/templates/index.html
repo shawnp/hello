@@ -1,6 +1,15 @@
 {% extends 'layouts/base.html'%}
+{% load humanize %}
 {% block title %} HomePage - {{ block.super}} {% endblock %}
 {% block content %}
 	<h1> Hello index page! </h1>
-	<p> I am a basic websie.</p>
-{% endblock %}
+	<p>There are {{number|apnumber}} dogs!</p>
+	<p> This is my name|slugify: {{ thing|slugify }}</p>
+	<p> This is my name: {{ thing }}</p>
+	<p> This is my name|title: {{ thing|title }}</p>
+	<p> This is my name|truncateword:1: {{ thing|truncatewords:1 }}</p>
+	<p>Page 35</p>
+
+
+{% endblock content %}
+
