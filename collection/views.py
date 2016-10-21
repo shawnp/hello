@@ -12,8 +12,9 @@ def index(request):
 	number = 6
 	# Dont forget the quotes because its a string,
 	# Not an interger
-	thing = "shawn philbert"
-	return render(request, 'index.html',{'number':number,
+	thing = "Thing name"
+	return render(request, 'index.html',{
+		'number':number,
 		#Donot forget to pass it in tand the last comma
 		'thing':thing,
 	})
