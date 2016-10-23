@@ -132,6 +132,18 @@ ENV/
 .ropeproject
 
 -------------
+Django-tool-bar
 
+SETTTING:
+'debug_toolbar.middleware.DebugToolbarMiddleware'
+INTERNAL_IPS
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+'django.contrib.staticfiles'
+'debug_toolbar'
 
-
+URLS:
+if setting.DEBUG:
+	import debug_toolbar
+	urlpattens = patterns('',
+		url(r'^__debug__/', include(debug_toolbar.urls)),
+	)
